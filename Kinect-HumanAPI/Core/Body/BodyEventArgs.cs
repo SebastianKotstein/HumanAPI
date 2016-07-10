@@ -8,23 +8,29 @@ namespace SKotstein.Kinect.API.Core
 {
     public class BodyEventArgs : EventArgs
     {
-        private readonly IBodyController bc;
-        private readonly ulong trackingId;
+        private IBodyController _bc;
+        private ulong _trackingId;
 
         public BodyEventArgs(IBodyController bc, ulong trackingId)
         {
-            this.bc = bc;
-            this.trackingId = trackingId;
+            this._bc = bc;
+            this._trackingId = trackingId;
         }
 
-        public ulong GetTrackingId()
+        public IBodyController BodyController
         {
-            return this.trackingId;
+            get
+            {
+                return _bc;
+            }
         }
 
-        public IBodyController GetBodyController()
+        public ulong TrackingId
         {
-            return this.bc;
+            get
+            {
+                return _trackingId;
+            }
         }
 
     }

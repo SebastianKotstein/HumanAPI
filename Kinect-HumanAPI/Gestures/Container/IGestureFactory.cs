@@ -22,6 +22,6 @@ namespace SKotstein.Kinect.API.Gestures
         /// Returns a list of identifiers of gestures which can be created by this factory
         /// </summary>
         /// <returns>list with identifiers</returns>
-        List<int> GesturePortfolio { get; };
+        List<int> GesturePortfolio { get; }
     }
 }
